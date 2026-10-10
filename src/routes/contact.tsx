@@ -1,7 +1,61 @@
-import { createFileRoute } from '@tanstack/react-router';
-import { ArrowUpRight } from 'lucide-react';
-import { PageIntro } from '@/components/site/layout';
-import { ContactForm } from '@/components/site/contact-form';
-import { pageHead } from '@/data/content';
-export const Route=createFileRoute('/contact')({head:()=>pageHead('Get a Custom Editing Quote | Swipecut','Tell Swipecut about your content, formats and editing needs to prepare a custom project or monthly editing inquiry.','/contact'),component:Contact});
-function Contact(){return <><PageIntro label="LET’S FIND YOUR NEXT GREAT EDIT" title={<>Your next chapter.<br/>Starts with a conversation<span className="text-primary">.</span></>} text="Tell us what you’re creating, how often you publish, and what you need from your editing partner."/><section className="container contact-layout"><aside className="contact-aside"><h2>A little context.<br/>A better collaboration.</h2><p>One-off project or ongoing editing partner? Either way, let’s start with what you need.</p><ul><li>Custom quotes, always.<ArrowUpRight size={15}/></li><li>Projects & monthly arrangements.<ArrowUpRight size={15}/></li><li>India & international clients.<ArrowUpRight size={15}/></li></ul><p>No contact details have been supplied yet. This form does not send or store inquiries until a real business email is configured.</p></aside><ContactForm/></section></>;}
+import { createFileRoute } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
+import { PageIntro } from "@/components/site/layout";
+import { ContactForm } from "@/components/site/contact-form";
+import { pageHead } from "@/data/content";
+export const Route = createFileRoute("/contact")({
+  head: () =>
+    pageHead(
+      "Get a Custom Editing Quote | Swipecut",
+      "Tell Swipecut about your content, formats and editing needs to prepare a custom project or monthly editing inquiry.",
+      "/contact",
+    ),
+  component: Contact,
+});
+function Contact() {
+  return (
+    <>
+      <PageIntro
+        label="LET’S FIND YOUR NEXT GREAT EDIT"
+        title={
+          <>
+            Your next chapter.
+            <br />
+            Starts with a conversation<span className="text-primary">.</span>
+          </>
+        }
+        text="Tell us what you’re creating, how often you publish, and what you need from your editing partner."
+      />
+      <section className="container contact-layout">
+        <aside className="contact-aside">
+          <h2>
+            A little context.
+            <br />A better collaboration.
+          </h2>
+          <p>
+            One-off project or ongoing editing partner? Either way, let’s start with what you need.
+          </p>
+          <ul>
+            <li>
+              Custom quotes, always.
+              <ArrowUpRight size={15} />
+            </li>
+            <li>
+              Projects & monthly arrangements.
+              <ArrowUpRight size={15} />
+            </li>
+            <li>
+              India & international clients.
+              <ArrowUpRight size={15} />
+            </li>
+          </ul>
+          <p>
+            No contact details have been supplied yet. This form does not send or store inquiries
+            until a real business email is configured.
+          </p>
+        </aside>
+        <ContactForm />
+      </section>
+    </>
+  );
+}

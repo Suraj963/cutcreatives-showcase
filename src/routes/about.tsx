@@ -1,6 +1,74 @@
-import { createFileRoute } from '@tanstack/react-router';
-import studio from '@/assets/studio-demo.jpg';
-import { PageIntro, QuoteLink, ProcessSteps, FinalCTA } from '@/components/site/layout';
-import { pageHead } from '@/data/content';
-export const Route=createFileRoute('/about')({head:()=>pageHead('About the Team | Swipecut','Meet Swipecut’s approach: a small editing team serving clients in India and internationally with creative care and clear communication.','/about'),component:About});
-function About(){return <><PageIntro label="SMALL TEAM. SHARED OBSESSION." title={<>We care about<br/>the cut<span className="text-primary">.</span></>} text="Swipecut is a small video editing team helping businesses, brands, founders and creators make more of their footage — in India and internationally."/><section className="container about-lead"><div className="about-image"><img src={studio} width={1440} height={960} loading="lazy" alt="Illustrative creative studio portrait — not a Swipecut team member"/><span>ILLUSTRATIVE STUDIO PREVIEW · NOT A TEAM PORTRAIT</span></div><div><h2>Good editing is thoughtful.<br/>Great workflows are too.</h2><p>We believe editing is where footage becomes a story. The rhythm, the clarity, the little details — every decision should earn its place.</p><p>Our approach combines creative quality with clear communication and consistent workflows. We work with your references, listen to your feedback and organize the process around the content you need to publish.</p><p>No one-size-fits-all edit. No unnecessary complexity. Just a shared direction and care for the finished frame.</p><QuoteLink>Meet Your Next Editing Partner</QuoteLink></div></section><section className="process-band"><div className="container section"><span className="eyebrow">HOW WE WORK TOGETHER</span><h2>A repeatable process.<br/>A personal approach.</h2><ProcessSteps/></div></section><FinalCTA/></>;}
+import { createFileRoute } from "@tanstack/react-router";
+import studio from "@/assets/studio-demo.jpg";
+import { PageIntro, QuoteLink, ProcessSteps, FinalCTA } from "@/components/site/layout";
+import { pageHead } from "@/data/content";
+export const Route = createFileRoute("/about")({
+  head: () =>
+    pageHead(
+      "About the Team | Swipecut",
+      "Meet Swipecut’s approach: a small editing team serving clients in India and internationally with creative care and clear communication.",
+      "/about",
+    ),
+  component: About,
+});
+function About() {
+  return (
+    <>
+      <PageIntro
+        label="SMALL TEAM. SHARED OBSESSION."
+        title={
+          <>
+            We care about
+            <br />
+            the cut<span className="text-primary">.</span>
+          </>
+        }
+        text="Swipecut is a small video editing team helping businesses, brands, founders and creators make more of their footage — in India and internationally."
+      />
+      <section className="container about-lead">
+        <div className="about-image">
+          <img
+            src={studio}
+            width={1440}
+            height={960}
+            loading="lazy"
+            alt="Illustrative creative studio portrait — not a Swipecut team member"
+          />
+          <span>ILLUSTRATIVE STUDIO PREVIEW · NOT A TEAM PORTRAIT</span>
+        </div>
+        <div>
+          <h2>
+            Good editing is thoughtful.
+            <br />
+            Great workflows are too.
+          </h2>
+          <p>
+            We believe editing is where footage becomes a story. The rhythm, the clarity, the little
+            details — every decision should earn its place.
+          </p>
+          <p>
+            Our approach combines creative quality with clear communication and consistent
+            workflows. We work with your references, listen to your feedback and organize the
+            process around the content you need to publish.
+          </p>
+          <p>
+            No one-size-fits-all edit. No unnecessary complexity. Just a shared direction and care
+            for the finished frame.
+          </p>
+          <QuoteLink>Meet Your Next Editing Partner</QuoteLink>
+        </div>
+      </section>
+      <section className="process-band">
+        <div className="container section">
+          <span className="eyebrow">HOW WE WORK TOGETHER</span>
+          <h2>
+            A repeatable process.
+            <br />A personal approach.
+          </h2>
+          <ProcessSteps />
+        </div>
+      </section>
+      <FinalCTA />
+    </>
+  );
+}

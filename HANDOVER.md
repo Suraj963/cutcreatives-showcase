@@ -6,9 +6,9 @@ This is a frontend-only website: no app backend, APIs, authentication, database,
 ## Add local videos
 1. Place a compressed H.264 MP4 with AAC audio and fast-start metadata in `public/videos/` (for example `public/videos/brand-edit.mp4`).
 2. Place its compressed JPEG/WebP poster in `public/images/` (for example `public/images/brand-edit.webp`). Aim for a few hundred KB per poster and a short, optimized preview rather than a huge master export.
-3. In `src/data/portfolio.ts`, replace or add a project object with a unique `id`, actual `title`, `category`, `videoUrl: '/videos/brand-edit.mp4'`, `thumbnailUrl: '/images/brand-edit.webp'`, correct `aspectRatio`, `featured`, and `mediaType: 'mp4'`. Optional fields: description and techniques.
+3. In `src/data/portfolio.ts`, replace or add a project object with a unique `id`, actual `title`, `category`, `videoUrl: '/videos/brand-edit.mp4'`, `thumbnailUrl: '/images/brand-edit.webp'`, correct `aspectRatio`, `featured`, and `mediaType: 'mp4'`. Optional fields: description, techniques and `fallbackVideoUrl` (a direct WebM URL for browsers without H.264 support). Remove the demo fallback when replacing a project.
 4. Remove `isPlaceholder: true` only after replacing the demonstration assets with genuine project media.
-5. Set `featured: true` to include the project on Home. Set `showreel` to the desired item. The hero currently uses entries 0, 1 and 2: keep at least three entries, and update these selections in `FeaturedShowreel` if needed.
+5. Set `featured: true` to include the project on Home. Change the project IDs selected by `showreel`, `heroLeft` and `heroRight` in the same data file to choose the homepage composition. Entries can be added or removed safely without changing the UI.
 
 ## Hosted media
 Use direct HTTPS MP4 URLs with `mediaType: 'mp4'`. Normal YouTube pages, Google Drive pages and Vimeo pages are not MP4s. For embeds use `mediaType: 'embed'` and an official `https://www.youtube-nocookie.com/embed/VIDEO_ID`, `https://www.youtube.com/embed/VIDEO_ID`, or `https://player.vimeo.com/video/VIDEO_ID` URL. Supply a real thumbnail separately. Do not add autoplay-with-sound parameters. Below-fold players load only when opened; videos use preload none. Active MP4 players pause other native players.
