@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+﻿import { useRef, useState } from "react";
 import { Play, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -68,7 +68,7 @@ export function VideoPlayer({ item }: { item: PortfolioItem }) {
     </video>
   );
 }
-export function  ({
+export function VideoCard({
   item,
   onOpen,
   priority = false,
@@ -137,11 +137,11 @@ export function ProjectModal({
             <DialogTitle>{item.title}</DialogTitle>
             <DialogDescription>
               {item.isPlaceholder
-                ? "Development preview — illustrative generated visuals, not actual client work."
+                ? "Development preview â€” illustrative generated visuals, not actual client work."
                 : item.description || item.category}
             </DialogDescription>
             <VideoPlayer item={item} />
-            {item.techniques && <p className="techniques">{item.techniques.join(" · ")}</p>}
+            {item.techniques && <p className="techniques">{item.techniques.join(" Â· ")}</p>}
           </>
         )}
       </DialogContent>
@@ -234,7 +234,7 @@ export function FeaturedShowreel() {
           <span className="frame-number">03 / MOTION GRAPHICS</span>
           <div className="studio-note">
             Good footage is a start.
-            <br />A good edit makes it count.<span>↗</span>
+            <br />A good edit makes it count.<span>â†—</span>
           </div>
         </div>
       </div>
@@ -308,3 +308,4 @@ export function BeforeAfterComparison() {
     </div>
   );
 }
+
