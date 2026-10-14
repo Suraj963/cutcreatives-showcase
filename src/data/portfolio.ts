@@ -53,7 +53,7 @@ export const portfolio: PortfolioItem[] = [
     videoUrl: studioVideo.url,
     fallbackVideoUrl: studioFallback.url,
     thumbnailUrl: studio,
-    aspectRatio: "9:16",
+    aspectRatio: "16:9",
     featured: true,
     mediaType: "mp4",
     isPlaceholder: true,
