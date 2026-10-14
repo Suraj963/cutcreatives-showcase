@@ -68,7 +68,7 @@ export function VideoPlayer({ item }: { item: PortfolioItem }) {
     </video>
   );
 }
-export function VideoCard({
+export function  ({
   item,
   onOpen,
   priority = false,

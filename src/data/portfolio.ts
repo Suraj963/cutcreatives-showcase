@@ -36,7 +36,7 @@ export const portfolio: PortfolioItem[] = [
     id: "brand-film",
     title: "A little more momentum.",
     category: "Short-form",
-    videoUrl: sneakerVideo.url,
+    videoUrl: "../../public/videos/brand-film.mp4",
     fallbackVideoUrl: sneakerFallback.url,
     thumbnailUrl: sneaker,
     aspectRatio: "9:16",
