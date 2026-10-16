@@ -26,10 +26,10 @@ function Work() {
         text="Different formats. Different styles. One focus: making every cut count."
       />
       <section className="container portfolio-page">
-        <p className="demo-disclosure">
+        {/* <p className="demo-disclosure">
           Development previews only — illustrative generated visuals, not actual client work. Actual
           project footage has not been supplied.
-        </p>
+        </p> */}
         <PortfolioGrid />
       </section>
       <FinalCTA />

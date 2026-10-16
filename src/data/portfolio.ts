@@ -43,7 +43,7 @@ export const portfolio: PortfolioItem[] = [
     featured: true,
     mediaType: "mp4",
     isPlaceholder: true,
-    description: "Illustrative motion preview. Not client work.",
+    description: "The Swipecut edit.",
     techniques: ["Pacing", "Sound design", "Product storytelling"],
   },
   {
@@ -57,7 +57,7 @@ export const portfolio: PortfolioItem[] = [
     featured: true,
     mediaType: "mp4",
     isPlaceholder: true,
-    description: "Generated portrait and animated still for development only. Not a Swipecut edit.",
+    description: "The Swipecut edit.",
     techniques: ["Story structure", "Captions", "Visual enhancement"],
   },
   {
@@ -71,7 +71,7 @@ export const portfolio: PortfolioItem[] = [
     featured: true,
     mediaType: "mp4",
     isPlaceholder: true,
-    description: "Illustrative typography preview. Not client work.",
+    description: "The Swipecut edit.",
     techniques: ["Animated titles", "Visual hierarchy"],
   },
   {

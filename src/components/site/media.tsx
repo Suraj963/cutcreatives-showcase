@@ -93,7 +93,7 @@ export function VideoCard({
           height={item.aspectRatio === "9:16" ? 1152 : 960}
         />
         <span className="preview-label">
-          {item.isPlaceholder ? "DEVELOPMENT PREVIEW" : item.category.toUpperCase()}
+          {item.isPlaceholder ? "PREVIEW" : item.category.toUpperCase()}
         </span>
         <span className="play-disc">
           <Play fill="currentColor" size={19} />
@@ -137,7 +137,7 @@ export function ProjectModal({
             <DialogTitle>{item.title}</DialogTitle>
             <DialogDescription>
               {item.isPlaceholder
-                ? "Development preview â€” illustrative generated visuals, not actual client work."
+                ? "preview."
                 : item.description || item.category}
             </DialogDescription>
             <VideoPlayer item={item} />
