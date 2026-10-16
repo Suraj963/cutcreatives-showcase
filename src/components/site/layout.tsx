@@ -130,7 +130,7 @@ export function Footer() {
           </div>
           <div>
             <h3>Explore</h3>
-            <Link to="/work">Work</Link>
+            {/* <Link to="/work">Work</Link> */}
             <Link to="/process">Process</Link>
             <Link to="/about">About</Link>
             <Link to="/contact">Get a Quote</Link>
