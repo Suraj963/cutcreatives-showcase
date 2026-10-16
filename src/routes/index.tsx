@@ -66,11 +66,11 @@ function Home() {
         </div>
         <PortfolioGrid featured />
       </section>
-      <section className="comparison-band">
+      {/* <section className="comparison-band">
         <div className="container section">
           <BeforeAfterComparison />
         </div>
-      </section>
+      </section> */}
       <section className="container section services-preview">
         <div>
           <span className="eyebrow">FROM RAW FILES TO FINAL FRAMES</span>

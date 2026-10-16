@@ -245,67 +245,67 @@ export function FeaturedShowreel() {
     </>
   );
 }
-// export function BeforeAfterComparison() {
-//   const [active, setActive] = useState<"raw" | "edited">("edited");
-//   const configured = !!comparison.rawVideoUrl && !!comparison.editedVideoUrl;
-//   return (
-//     <div className="comparison-layout">
-//       <div>
-//         <span className="eyebrow">THE DIFFERENCE IS IN THE DETAILS</span>
-//         <h2>
-//           Same footage.
-//           <br />
-//           Completely different
-//           <br />
-//           <span className="text-primary">experience.</span>
-//         </h2>
-//         <p>
-//           Good editing is more than cutting clips together. It's pacing, clarity, sound,
-//           storytelling, and knowing what deserves the viewer's attention.
-//         </p>
-//       </div>
-//       <div>
-//         <div className="comparison-tabs">
-//           {(["raw", "edited"] as const).map((v) => (
-//             <Button
-//               key={v}
-//               variant={active === v ? "filterActive" : "filter"}
-//               aria-pressed={active === v}
-//               onClick={() => setActive(v)}
-//             >
-//               {v === "raw" ? "Raw footage" : "Final edit"}
-//             </Button>
-//           ))}
-//         </div>
-//         {configured ? (
-//           <VideoPlayer
-//             key={active}
-//             item={{
-//               id: active,
-//               title: active === "raw" ? "Raw footage" : "Final edit",
-//               category: "Talking Head",
-//               videoUrl: active === "raw" ? comparison.rawVideoUrl : comparison.editedVideoUrl,
-//               thumbnailUrl:
-//                 active === "raw" ? comparison.rawThumbnailUrl : comparison.editedThumbnailUrl,
-//               aspectRatio: "16:9",
-//               featured: false,
-//               mediaType: comparison.mediaType,
-//             }}
-//           />
-//         ) : (
-//           <div className="comparison-placeholder">
-//             <span className="comparison-mark">{active === "raw" ? "[ RAW ]" : "[ REFINED ]"}</span>
-//             <p>{active === "raw" ? "The original footage." : "The finished story."}</p>
-//             <small>Matching raw and edited footage has not been supplied.</small>
-//           </div>
-//         )}
-//         <span className="comparison-footnote">
-//           {configured
-//             ? "One project. Two perspectives."
-//             : "A real comparison will appear when a matching video pair is added."}
-//         </span>
-//       </div>
-//     </div>
-//   );
-// }
+export function BeforeAfterComparison() {
+  const [active, setActive] = useState<"raw" | "edited">("edited");
+  const configured = !!comparison.rawVideoUrl && !!comparison.editedVideoUrl;
+  return (
+    <div className="comparison-layout">
+      <div>
+        <span className="eyebrow">THE DIFFERENCE IS IN THE DETAILS</span>
+        <h2>
+          Same footage.
+          <br />
+          Completely different
+          <br />
+          <span className="text-primary">experience.</span>
+        </h2>
+        <p>
+          Good editing is more than cutting clips together. It's pacing, clarity, sound,
+          storytelling, and knowing what deserves the viewer's attention.
+        </p>
+      </div>
+      <div>
+        <div className="comparison-tabs">
+          {(["raw", "edited"] as const).map((v) => (
+            <Button
+              key={v}
+              variant={active === v ? "filterActive" : "filter"}
+              aria-pressed={active === v}
+              onClick={() => setActive(v)}
+            >
+              {v === "raw" ? "Raw footage" : "Final edit"}
+            </Button>
+          ))}
+        </div>
+        {configured ? (
+          <VideoPlayer
+            key={active}
+            item={{
+              id: active,
+              title: active === "raw" ? "Raw footage" : "Final edit",
+              category: "Talking Head",
+              videoUrl: active === "raw" ? comparison.rawVideoUrl : comparison.editedVideoUrl,
+              thumbnailUrl:
+                active === "raw" ? comparison.rawThumbnailUrl : comparison.editedThumbnailUrl,
+              aspectRatio: "16:9",
+              featured: false,
+              mediaType: comparison.mediaType,
+            }}
+          />
+        ) : (
+          <div className="comparison-placeholder">
+            <span className="comparison-mark">{active === "raw" ? "[ RAW ]" : "[ REFINED ]"}</span>
+            <p>{active === "raw" ? "The original footage." : "The finished story."}</p>
+            <small>Matching raw and edited footage has not been supplied.</small>
+          </div>
+        )}
+        <span className="comparison-footnote">
+          {configured
+            ? "One project. Two perspectives."
+            : "A real comparison will appear when a matching video pair is added."}
+        </span>
+      </div>
+    </div>
+  );
+}
 
