@@ -178,7 +178,7 @@ export function PortfolioGrid({ featured = false }: { featured?: boolean }) {
   );
   return (
     <>
-      {!featured && <PortfolioFilters active={active} onChange={setActive} />}
+      {/* {!featured && <PortfolioFilters active={active} onChange={setActive} />} */}
       <div className={`portfolio-grid ${featured ? "featured-grid" : ""}`}>
         {items.map((item) => (
           <div className="portfolio-entry" key={item.id}>
@@ -186,7 +186,7 @@ export function PortfolioGrid({ featured = false }: { featured?: boolean }) {
             <div className="project-caption">
               <h3>{item.title}</h3>
               <span>{item.aspectRatio}</span>
-            </div>
+            </div> 
           </div>
         ))}
       </div>
