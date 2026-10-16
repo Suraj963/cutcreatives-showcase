@@ -234,7 +234,7 @@ export function FeaturedShowreel() {
           <span className="frame-number">03 / MOTION GRAPHICS</span>
           <div className="studio-note">
             Good footage is a start.
-            <br />A good edit makes it count.<span>â†—</span>
+            <br />A good edit makes it count.
           </div>
         </div>
       </div>
