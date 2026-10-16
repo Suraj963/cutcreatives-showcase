@@ -31,11 +31,11 @@ function Process() {
           <QuoteLink>Tell Us What You Need</QuoteLink>
         </div>
       </section>
-      <section className="comparison-band">
+      {/* <section className="comparison-band">
         <div className="container section">
           <BeforeAfterComparison />
         </div>
-      </section>
+      </section> */}
       <FAQ />
       <FinalCTA />
     </>

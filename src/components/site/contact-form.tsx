@@ -105,11 +105,11 @@ export function ContactForm() {
     <form noValidate onSubmit={submit} className="quote-form">
       <div className="contact-notice">
         <Mail size={20} />
-        <p>
+        {/* <p>
           {configured
             ? "Your brief will open in your email app. You stay in control of sending it."
             : "Contact submission is not yet configured. You can prepare your brief, but it will not be sent or stored."}
-        </p>
+        </p> */}
       </div>
       <div className="form-grid">
         {field("name", "Your name")}

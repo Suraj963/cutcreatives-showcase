@@ -18,7 +18,7 @@ function Home() {
     <>
       <section className="home-hero">
         <p className="hero-label">
-          <span className="status-dot" /> SMALL TEAM. SHARP EDITS. BIG POSSIBILITIES.
+          <span className="status-dot" /> SHARP EDITS. BIG POSSIBILITIES.
         </p>
         <h1 className="hero-heading reveal">
           Your footage. <span className="edit-word">Our edit.</span>
@@ -32,10 +32,10 @@ function Home() {
         <div className="button-row">
           <QuoteLink>Let's Talk About Your Content</QuoteLink>
           <Button asChild variant="studioOutline">
-            {/* <Link to="/work">
+            <Link to="/work">
               Explore Our Work
               <ArrowUpRight />
-            </Link> */}
+            </Link>
           </Button>
         </div>
         <FeaturedShowreel />
@@ -59,10 +59,10 @@ function Home() {
             </h2>
             <p>Different formats. Different styles. One focus: making every cut count.</p>
           </div>
-          {/* <Link to="/work" className="text-link">
+          <Link to="/work" className="text-link">
             Explore all work
             <ArrowUpRight size={16} />
-          </Link> */}
+          </Link>
         </div>
         <PortfolioGrid featured />
       </section>

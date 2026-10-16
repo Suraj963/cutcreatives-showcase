@@ -17,7 +17,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const links = [
-    // ["Work", "/work"],
+    ["Work", "/work"],
     ["Services", "/services"],
     ["Process", "/process"],
     ["About", "/about"],
@@ -80,10 +80,10 @@ export function QuoteLink({ children = "Start a Project" }: { children?: React.R
 export function WorkLink() {
   return (
     <Button asChild variant="studioOutline">
-      {/* <Link to="/work">
+      <Link to="/work">
         View Our Work
         <ArrowUpRight />
-      </Link> */}
+      </Link>
     </Button>
   );
 }
@@ -105,7 +105,7 @@ export function FinalCTA() {
             </p>
             <div className="button-row">
               <QuoteLink />
-              {/* <WorkLink /> */}
+              <WorkLink />
             </div>
           </div>
         </div>
@@ -130,7 +130,7 @@ export function Footer() {
           </div>
           <div>
             <h3>Explore</h3>
-            {/* <Link to="/work">Work</Link> */}
+            <Link to="/work">Work</Link>
             <Link to="/process">Process</Link>
             <Link to="/about">About</Link>
             <Link to="/contact">Get a Quote</Link>
