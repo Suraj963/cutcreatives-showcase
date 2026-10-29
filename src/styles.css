@@ -507,7 +507,7 @@ img {
   align-items: start;
 }
 .portfolio-entry:nth-child(3n + 2) {
-  padding-top: 0;
+  padding-top: 50px;
 }
 .portfolio-entry .ratio-vertical {
   max-height: 420px;
@@ -517,11 +517,11 @@ img {
 .featured-grid {
   grid-template-columns: 0.85fr 1.3fr 0.95fr;
 }
-.featured-grid .portfolio-entry:nth-child(2),
+.featured-grid .portfolio-entry:nth-child(2) {
+  padding-top: 55px;
+}
 .featured-grid .portfolio-entry:nth-child(3) {
-  padding-top: 0;
-  width: 100%;
-  margin-left: 0;
+  padding-top: 105px;
 }
 .project-caption {
   display: flex;
@@ -1355,40 +1355,43 @@ img {
   }
   .portfolio-grid,
   .featured-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: start;
+    grid-template-columns: 1fr 1fr;
     gap: 25px 16px;
   }
-  .portfolio-grid .portfolio-entry,
-  .featured-grid .portfolio-entry {
-    grid-column: auto;
-    width: 100%;
-    margin: 0;
+  .featured-grid .portfolio-entry:nth-child(2) {
+    padding-top: 30px;
+  }
+  .featured-grid .portfolio-entry:nth-child(3) {
+    grid-column: 1/-1;
     padding-top: 0;
-    min-width: 0;
+    width: 75%;
+    margin-left: auto;
+  }
+  .portfolio-entry:nth-child(3n + 2) {
+    padding-top: 0;
   }
   .portfolio-entry .ratio-vertical {
     height: auto;
-    aspect-ratio: 9 / 16;
+    aspect-ratio: 9/16;
     max-height: none;
-  }
-  .project-caption {
-    align-items: flex-start;
-    margin-top: 10px;
-    gap: 8px;
   }
   .project-caption h3 {
     font-size: 13px;
   }
   .project-caption span {
     font-size: 8px;
-    flex-shrink: 0;
   }
-  .portfolio-grid:not(.featured-grid) .portfolio-entry:has(.ratio-wide),
+  .project-caption {
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+  .portfolio-grid:not(.featured-grid) .portfolio-entry:has(.ratio-wide) {
+    grid-column: 1/-1;
+  }
   .portfolio-grid:not(.featured-grid) .portfolio-entry:has(.ratio-square) {
-    grid-column: auto;
-    width: 100%;
-    margin-left: 0;
+    grid-column: 1/-1;
+    width: 80%;
+    margin-left: auto;
   }
   .comparison-layout,
   .services-preview,
