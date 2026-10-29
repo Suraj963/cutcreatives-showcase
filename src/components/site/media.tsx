@@ -203,7 +203,7 @@ export function FeaturedShowreel() {
     <>
       <div className="hero-composition">
         <div className="hero-side hero-left">
-          <span className="frame-number">01 / SHORT-FORM</span>
+          <span className="frame-number">01 / MOTION GRAPHICS</span>
           {left && <VideoCard item={left} onOpen={setSelected} priority />}
         </div>
         <div className="hero-main">

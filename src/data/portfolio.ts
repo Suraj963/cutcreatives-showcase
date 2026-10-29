@@ -32,7 +32,6 @@ export type PortfolioItem = {
   isPlaceholder?: boolean;
 };
 
-// The new video is first, followed by your existing projects.
 export const portfolio: PortfolioItem[] = [
   {
     id: "stop-the-manipulation",
@@ -126,20 +125,21 @@ export const portfolio: PortfolioItem[] = [
   },
 ];
 
-// Existing hero selections remain unchanged.
+// Existing center hero video.
 export const showreel = portfolio.find(
   (item) => item.id === "founder-story"
 );
 
+// NEW: Show Stop the Manipulation in the first (left) hero position.
 export const heroLeft = portfolio.find(
-  (item) => item.id === "brand-film"
+  (item) => item.id === "stop-the-manipulation"
 );
 
+// Existing right hero video.
 export const heroRight = portfolio.find(
   (item) => item.id === "motion-study"
 );
 
-// Existing comparison remains unchanged.
 export const comparison = {
   title: "Raw to refined",
   rawVideoUrl: "",
