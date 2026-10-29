@@ -40,10 +40,23 @@ export const portfolio: PortfolioItem[] = [
     videoUrl: "/videos/stop-the-manipulation.mp4",
     thumbnailUrl: "/images/stop-the-manipulation.png",
     aspectRatio: "9:16",
-    featured: false,
+    featured: true,
     mediaType: "mp4",
     description: "A motion-graphics edit exploring manipulation and control.",
     techniques: ["Motion graphics", "Visual storytelling", "Typography"],
+  },
+  {
+    id: "easier-to-love",
+    title: "Easier to Love",
+    category: "Short-form",
+    videoUrl: "/videos/easier-to-love.mp4",
+    thumbnailUrl: "/images/easier-to-love.png",
+    aspectRatio: "9:16",
+    featured: true,
+    mediaType: "mp4",
+    description:
+      "An emotional cinematic edit exploring anxiety, connection, and love.",
+    techniques: ["Cinematic editing", "Emotional storytelling", "Typography"],
   },
   {
     id: "brand-film",
@@ -125,17 +138,17 @@ export const portfolio: PortfolioItem[] = [
   },
 ];
 
-// Existing center hero video.
-export const showreel = portfolio.find(
-  (item) => item.id === "founder-story"
-);
-
-// NEW: Show Stop the Manipulation in the first (left) hero position.
+// First / left: Stop the Manipulation
 export const heroLeft = portfolio.find(
   (item) => item.id === "stop-the-manipulation"
 );
 
-// Existing right hero video.
+// Second / center: Easier to Love
+export const showreel = portfolio.find(
+  (item) => item.id === "easier-to-love"
+);
+
+// Third / right: existing Motion Study
 export const heroRight = portfolio.find(
   (item) => item.id === "motion-study"
 );
