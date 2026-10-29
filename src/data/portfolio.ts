@@ -65,7 +65,7 @@ export const portfolio: PortfolioItem[] = [
     videoUrl: "/videos/brand-film.mp4",
     fallbackVideoUrl: sneakerFallback.url,
     thumbnailUrl: "/images/brand-film.png",
-    aspectRatio: "9:16",
+    aspectRatio: "16:9",
     featured: true,
     mediaType: "mp4",
     isPlaceholder: true,
