@@ -51,7 +51,7 @@ export const portfolio: PortfolioItem[] = [
     category: "Short-form",
     videoUrl: "/videos/easier-to-love.mp4",
     thumbnailUrl: "/images/easier-to-love.png",
-    aspectRatio: "9:16",
+    aspectRatio: "16:9",
     featured: true,
     mediaType: "mp4",
     description:
