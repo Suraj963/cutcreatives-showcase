@@ -1,3 +1,4 @@
+
 import studio from "@/assets/studio-demo.jpg";
 import sneaker from "@/assets/sneaker-demo.jpg";
 import motion from "@/assets/motion-demo.jpg";
@@ -7,6 +8,7 @@ import motionVideo from "@/assets/motion-demo.mp4.asset.json";
 import studioFallback from "@/assets/studio-demo.webm.asset.json";
 import sneakerFallback from "@/assets/sneaker-demo.webm.asset.json";
 import motionFallback from "@/assets/motion-demo.webm.asset.json";
+
 export type Category =
   | "Short-form"
   | "Long-form"
@@ -14,6 +16,7 @@ export type Category =
   | "Podcast"
   | "Motion Graphics"
   | "Content Repurposing";
+
 export type PortfolioItem = {
   fallbackVideoUrl?: string;
   id: string;
@@ -28,10 +31,21 @@ export type PortfolioItem = {
   mediaType: "mp4" | "embed";
   isPlaceholder?: boolean;
 };
-// Add one object per project. Use /videos/name.mp4 and /images/name.jpg for local
-// files, a direct HTTPS MP4 URL, or an official YouTube/Vimeo embed URL.
-// Remove isPlaceholder only when replacing BOTH the demo video and thumbnail.
+
+// The new video is first, followed by your existing projects.
 export const portfolio: PortfolioItem[] = [
+  {
+    id: "stop-the-manipulation",
+    title: "Stop the Manipulation",
+    category: "Motion Graphics",
+    videoUrl: "/videos/stop-the-manipulation.mp4",
+    thumbnailUrl: "/images/stop-the-manipulation.png",
+    aspectRatio: "9:16",
+    featured: false,
+    mediaType: "mp4",
+    description: "A motion-graphics edit exploring manipulation and control.",
+    techniques: ["Motion graphics", "Visual storytelling", "Typography"],
+  },
   {
     id: "brand-film",
     title: "A little more momentum.",
@@ -111,11 +125,21 @@ export const portfolio: PortfolioItem[] = [
     isPlaceholder: true,
   },
 ];
-// Change these IDs to choose the hero videos without editing any UI.
-export const showreel = portfolio.find((item) => item.id === "founder-story");
-export const heroLeft = portfolio.find((item) => item.id === "brand-film");
-export const heroRight = portfolio.find((item) => item.id === "motion-study");
-// Configure matching footage here. Leave empty until a REAL raw/edited pair exists.
+
+// Existing hero selections remain unchanged.
+export const showreel = portfolio.find(
+  (item) => item.id === "founder-story"
+);
+
+export const heroLeft = portfolio.find(
+  (item) => item.id === "brand-film"
+);
+
+export const heroRight = portfolio.find(
+  (item) => item.id === "motion-study"
+);
+
+// Existing comparison remains unchanged.
 export const comparison = {
   title: "Raw to refined",
   rawVideoUrl: "",
