@@ -1691,3 +1691,106 @@ img {
     transition: none !important;
   }
 }
+
+
+
+/* ==================================================
+   SWIPECUT PORTFOLIO ALIGNMENT OVERRIDE
+   Keep this at the VERY END of the loaded stylesheet.
+   ================================================== */
+
+/* Desktop and tablet: remove staggered card offsets */
+.portfolio-grid .portfolio-entry,
+.featured-grid .portfolio-entry {
+  align-self: start !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  min-width: 0 !important;
+}
+
+.portfolio-grid,
+.featured-grid {
+  align-items: start !important;
+  row-gap: 32px !important;
+}
+
+.featured-grid {
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.3fr) minmax(0, 0.95fr) !important;
+}
+
+.portfolio-grid .portfolio-entry:nth-child(3n + 2),
+.featured-grid .portfolio-entry:nth-child(2),
+.featured-grid .portfolio-entry:nth-child(3) {
+  padding-top: 0 !important;
+  margin-left: 0 !important;
+  transform: none !important;
+}
+
+/* Consistent media width */
+.portfolio-grid .portfolio-entry .video-card,
+.featured-grid .portfolio-entry .video-card,
+.portfolio-grid .portfolio-entry .thumbnail-button,
+.featured-grid .portfolio-entry .thumbnail-button {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.portfolio-grid .project-caption,
+.featured-grid .project-caption {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  width: 100% !important;
+  margin-top: 12px !important;
+}
+
+/* Mobile: two equal columns, no offset or spanning cards */
+@media (max-width: 767px) {
+  .portfolio-grid,
+  .featured-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: start !important;
+    column-gap: 16px !important;
+    row-gap: 26px !important;
+  }
+
+  .portfolio-grid .portfolio-entry,
+  .featured-grid .portfolio-entry,
+  .portfolio-grid .portfolio-entry:nth-child(3n + 2),
+  .featured-grid .portfolio-entry:nth-child(2),
+  .featured-grid .portfolio-entry:nth-child(3),
+  .portfolio-grid:not(.featured-grid) .portfolio-entry:has(.ratio-wide),
+  .portfolio-grid:not(.featured-grid) .portfolio-entry:has(.ratio-square) {
+    grid-column: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-top: 0 !important;
+    margin: 0 !important;
+    align-self: start !important;
+    transform: none !important;
+  }
+
+  .portfolio-grid .portfolio-entry .ratio-vertical,
+  .featured-grid .portfolio-entry .ratio-vertical {
+    height: auto !important;
+    max-height: none !important;
+    aspect-ratio: 9 / 16 !important;
+  }
+
+  .portfolio-grid .project-caption h3,
+  .featured-grid .project-caption h3 {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+  }
+
+  .portfolio-grid .project-caption > span,
+  .featured-grid .project-caption > span {
+    flex-shrink: 0 !important;
+    font-size: 9px !important;
+  }
+}
